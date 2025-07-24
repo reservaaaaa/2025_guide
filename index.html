@@ -17,7 +17,24 @@
       margin: 0;
     font-family: "uzura_font";
       background-color: #DCEFEF;
+      scroll-behavior: smooth; /* スムーズスクロール */
     }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+     nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+ 
 
     .container {
       display: flex;
@@ -358,7 +375,7 @@ h1 {
 
       <!-- 商品カード -->
       <div class="guide-grid">
-        <div class="park-guide1">
+        <div class="park-guide1" onclick="location.href='model.html';">
           <img src="image/map atrc1.png" alt="商品1"
          onmouseover="this.src='image/map\ atrc2.png'"
          onmouseout="this.src='image/map\ atrc1.png'";>
