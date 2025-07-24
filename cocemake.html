@@ -72,25 +72,32 @@
     }
   }
   body {
-    background-color: #d0a2df;
+    background-color: #d8bde0;
     margin: 0;
     padding-top: 60px;
     box-sizing: border-box;
-    font-family: "uzura_font", 
+    font-family: "uzura_font";
     
+    
+    }
+    .modoru {
+      color: #007788;
     }
     .tejtunn {
       padding: 20px;
-      background-color: #fff;
+      background-color: #cef2fee9;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
       margin: 20px auto;
       max-width: 800px;
     }
+    .woruto {
+      margin-bottom: 1px;
+      margin-left: 10px;}
 </style>
 <body>
   <div class="top-bar">
-    <div class="logo">メニュー</div>
+    <button class="modoru" onclick="location.href='index.html';">メニュー</button>
 
     <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">
       <span></span>
@@ -109,6 +116,9 @@
         <li>ディズニー公式アプリをインストール</li>
      </ul>
      <p>これらの準備をしておくことで、当日のパークでの体験がより充実したものになります。</p>
+     <div class="woruto">
+       <img src="image/woruto.png" >
+       </div>
   </div>
 
   </div>
