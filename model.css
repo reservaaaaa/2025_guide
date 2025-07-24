@@ -1,0 +1,64 @@
+body {
+  font-family: 'Kosugi Maru', sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+header {
+  background-color: #006994;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 60px;
+}
+
+.card {
+  background: white;
+  border-left: 6px solid #3498db;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+  text-align: center;
+  background-color: #ddd;
+  padding: 15px;
+}
+
+/* モバイル対応 */
+@media screen and (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .card {
+    font-size: 14px;
+  }
+}
