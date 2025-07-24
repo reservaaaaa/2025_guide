@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+   <style>
+    .html{
+      font-family: "uzura_font";
+    }
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 30px;
+    width: 100%;
+    height: 60px;
+    background-color: #007788;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .top-bar .menu {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+  }
+  .top-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 20px;
+  }
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  @media (max-width: 600px) {
+    .top-bar {
+      padding: 0 20px;
+    }
+    .top-bar .menu {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 30px;
+      background: #007788;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 0;
+      box-sizing: border-box;
+    }
+    .top-bar .menu.active {
+      display: flex;
+    }
+    .hamburger {
+      display: flex;
+    }
+  }
+  body {
+    background-color: #d0a2df;
+    margin: 0;
+    padding-top: 60px;
+    box-sizing: border-box;
+    font-family: "uzura_font", 
+    
+    }
+    .tejtunn {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 800px;
+    }
+</style>
+<body>
+  <div class="top-bar">
+    <div class="logo">メニュー</div>
+
+    <div class="hamburger" onclick="document.querySelector('.menu').classList.toggle('active')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="tejtunn">
+     <h1>ディズニーシー攻略法として、まずはパークへ行く前の事前準備からご紹介</h1>
+
+     <p>出発前に必ずしてほしい準備は、以下の5つです。</p>
+     <ul>
+        <li>パークチケットを購入＆混雑予想を調べる</li>
+        <li>計画を立てる</li>
+        <li>ゆったり過ごしたい方はレストランの事前</li>
+        <li>ディズニー公式アプリをインストール</li>
+     </ul>
+     <p>これらの準備をしておくことで、当日のパークでの体験がより充実したものになります。</p>
+  </div>
+
+  </div>
+  
+</body>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ソロディズニーシーガイド</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .html{
+      font-family: "uzura_font";
+}
+    body {
+      margin: 0;
+    font-family: "uzura_font";
+      background-color: #DCEFEF;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+   
+    }
+
+    .sidebar-left,
+    .sidebar-right {
+      width: 20%;
+      background-color: #B3D8D8;
+      padding: 20px;
+    }
+
+    .sidebar-left li,
+    .sidebar-right li {
+      list-style: none;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .sidebar-left li:hover,
+    .sidebar-right li:hover {
+      background-color: #88BFBF;
+      color: white;
+    }
+
+    .main {
+      width: 60%;
+      background-color: #8CBBC2;
+      padding: 0px;
+      overflow-y: auto;
+    }
+
+    /* .title { 
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }*/
+
+       .title {
+      font-size: 15px;
+      margin-bottom: 10px;
+      text-align: center;
+      position: absolute;
+      bottom: 170px;
+    }
+    .headline {
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      position: absolute;
+      bottom: 100px;
+      
+    }
+    .saisho .title,
+    .saisho .headline {
+    position: absolute;
+    left: 0;
+    right: 0;
+   }
+   .saisho {
+  text-align: center;
+  position: relative;
+  height: 60vh;
+  background-image: url(image/hata.svg);
+  background-size: auto 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  
+}
+.hajimari{
+    padding: 20px;
+}
+.solokatu{
+    padding: 20px;
+}
+.soro-merit{
+    padding: 20px;
+}
+.list{
+    padding: 20px;
+}
+.list{
+    padding: 20px;
+}
+.make-plan {
+  padding: 20px;
+}
+.image-button {
+  /* ...既存のスタイル... */
+  position: absolute right: 20px; /* 右側に配置 */
+}
+    /* スライドショー */
+    .slideshow {
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+
+    .slides {
+      display: flex;
+      width: 300%;
+      animation: slide 9s infinite;
+    }
+
+    .slides img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @keyframes slide {
+      0%   { transform: translateX(0); }
+      33%  { transform: translateX(-100%); }
+      66%  { transform: translateX(-200%); }
+      100% { transform: translateX(0); }
+    }
+
+    /* 商品カード */
+    .guide-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+    padding: 20px;
+    background-image:"image/woruto.png";);
+    background-size: auto;
+    }
+
+    .park-guide1,
+    .park-guide2,
+    .park-guide3, {
+      flex: 1 1 calc(50% - 20px);
+      background-color:none;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+      padding: auto;
+    }
+    .park-guide4{
+        flex: 1 1 calc(50% - 20px);
+        background-color:none;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s;
+        padding: auto;
+    
+    }
+
+    .image-button2 {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+    display: inline-block;
+    
+}
+.image-button2 img {
+  width: 80px;
+  height: 30px;
+  display: block;
+}
+}
+
+    .park-guide1,.park-guide2,.park-guide3,.park-guide4:hover {
+      transform: scale(1.02);
+    }
+
+    .park-guide1 img {
+      width: 100%;
+      height: 250px;
+      object-fit: auto;
+      
+    }
+        .park-guide2 img {
+      width: 100%;
+      height: 250px;
+      object-fit: auto;
+      
+    }
+        .park-guide3 img {
+      width: 100%;
+      height: 250px;
+      object-fit: auto;
+      
+    }
+        .park-guide4 img {
+      /* width: 100%; */
+      /* height: 250px; */
+      /* object-fit: auto; */
+      position: relative;
+        bottom: 0px;
+        left: 5px
+    }
+
+    .product-card .info {
+      padding: 15px;
+    }
+
+    .product-card .info h3 {
+      margin: 0;
+      font-size: 1.2rem;
+    }
+
+    .product-card .info p {
+      margin: 5px 0 0;
+      color: #555;
+    }
+    /* 例：画像ボタン用のスタイル */
+.image-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+    display: inline-block;
+    
+}
+.image-button img {
+  width: 80px;
+  height: 30px;
+  display: block;
+}
+h1 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;}
+
+    /* レスポンシブ */
+    @media screen and (max-width: 768px) {
+      .sidebar-left,
+      .sidebar-right {
+        display: none;
+      }
+
+      .main {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .park-guide1{
+        flex: 1 1 100%;
+       image-size: auto 30%;
+      }
+        .park-guide2{
+        flex: 1 1 100%;
+      }
+        .park-guide3{
+        flex: 1 1 100%;
+      }
+        .park-guide4{
+        flex: 1 1 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- 左メニュー -->
+    <div class="sidebar-left">
+      <p>MENYU</p>
+      <ul>
+        <li>home</li>
+        <li>guide</li>
+        <li>list</li>
+      </ul>
+    </div>
+
+    <!-- メインコンテンツ -->
+    <div class="main">
+      <div class="title"></div>
+    <div class="center">
+      <div class="content">
+            <div class="saisho">
+            <div class="title">ひとり、だからいいんじゃないの。</div>
+            <div class="headline"><span>ソロディズニーシー</span><span>初心者ガイド</span></div>
+    </div>
+<div class="hajimari">
+        <h1>ひとり行動ってハードルが高い？</h1>
+<p>ごはんを食べるのも旅行するのも、絶対に誰かと過ごしたい人もいればひとりでも平気な人もいる。
+場面にもよるけれど、自分は後者だと思う、ディズニーが好きな人にぜひお勧めしたいのが「ソロディズニーシー」だ。</p>
+</div>
+<div class="sorokatu">
+        <h1>ソロ活って？</h1>
+        <p>ソロ活についての説明</p>
+        <p>「ソロ活」とは、ひとりで行動することを楽しむライフスタイルのこと。最近では、ひとりでの旅行や食事、趣味の時間を充実させる人が増えてきています。</p>
+</div>
+<div class="soro-merit">
+        <h1>ソロディズニーシーのメリット</h1>
+        <p>せっかく行くならやりたいことを全部したい。
+パレードが休止していたりフードワゴンが閉まっていたりもしたけど、いろいろ調べて分単位で計画したから当日は理想通りにまわることができて大満足！いつもよりゆっくりといろんなものが見れる。
+ひとりだとちょっとした時間調整やトイレのタイミングなどの小回りも聞くし、周囲も自分が思っているほど誰もこっちを気にしていない。
+ひとりディズニーになんの抵抗感も抱きません、通常営業に戻った後もあえてひとりインパを楽ししめる。ひとりだからこそできる楽しみ方やよかったことを挙げてみよう。</p>
+</div>
+
+    <div class="list">
+        <li>自分がやりたいことに惜しみなく時間を使える（パレ待ち、アトラク、キャラグリ周回など）</li>
+        <li>同行者を気にせず、好きなだけグッズやお土産を選べる</li>
+        <li>スーベニアグッズ目当てでフードやドリンクをハシゴしまくれる</li>
+        <li>好きなスポットやキャラの写真を好きなだけ撮れる</li>
+        <li>ベンチでひたすらぼーっと景色を眺めたりパークの音楽に浸ったりできる</li>
+        <li>アトラクションによってはシングルライダー制度で待ち時間が短い</li>
+        <li>トイレの時間やタイミングに気を遣わない</li>
+        <li>キャストさんに余裕があると構ってもらえる</li>
+    </div>
+      <div class="make-plan">
+        <h1>ソロディズニーシーの計画の立て方</h1>
+        <p>ソロディズニーシーを楽しむためには、事前に計画を立てることが重要です。以下のポイントを参考にしてみてください。</p>
+        <ul> 
+          <li>ショーやパレードの公演時間をチェック→スマホのメモにすべて書き出す（抽選不要の回があれば目印をつけておく）</li>
+          <li>その時期のフードやドリンクメニュー、スーベニアをチェック→行きたい店舗を決める</li>
+          <li>レストランやカフェがPS（事前予約）対象かチェック→ショーと被らない時間の候補を決める</li>
+          <li>PS受付開始日の時間ぴったりに予約チャレンジ</li>
+          <li>新グッズの発売日をチェック→事前予約のみ入場可のショップがあればメモしておく</li>
+          <li>上記が出そろったらざっくり一日のスケジュールを立てる→当日インして抽選結果で調整</li>
+        </ul>
+        <!-- 例：メインエリアの好きな場所に追加 -->
+<button class="image-button" onclick="location.href='cocemake.html';">
+  <img src="image/Group 14.png" alt="ボタン画像" 
+    onmouseover="this.src='image/Group 41.png'"
+    onmouseout="this.src='image/Group 14.png'">
+</button>
+      </div>
+    <div class="side">右側（広告・補足情報など）</div>
+  </div>
+      <!-- スライドショー -->
+      <div class="slideshow">
+        <div class="slides">
+          <img src="https://via.placeholder.com/800x300/8CBBC2/FFFFFF?text=スライド1" alt="slide1">
+          <img src="https://via.placeholder.com/800x300/B3D8D8/FFFFFF?text=スライド2" alt="slide2">
+          <img src="https://via.placeholder.com/800x300/88BFBF/FFFFFF?text=スライド3" alt="slide3">
+        </div>
+      </div>
+
+      <!-- 商品カード -->
+      <div class="guide-grid">
+        <div class="park-guide1">
+          <img src="image/map atrc1.png" alt="商品1"
+         onmouseover="this.src='image/map\ atrc2.png'"
+         onmouseout="this.src='image/map\ atrc1.png'";>
+
+        </div>
+
+        <div class="park-guide2">
+              <img src="image/map tabemono1.png" alt="商品1"
+         onmouseover="this.src='image/map\ tabemono2.png'"
+         onmouseout="this.src='image/map\ tabemono1.png'";>
+       
+          
+        </div>
+
+        <div class="park-guide3">
+          <img src="image/list.png" alt="商品3">
+
+        </div>
+
+        <div class="park-guide4">
+        <button class="image-button2" onclick="location.href='sonota.html';">
+  <img src="image/Group 14.png" alt="ボタン画像" 
+    onmouseover="this.src='image/Group 41.png'"
+    onmouseout="this.src='image/Group 14.png'">
+        
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- 右メニュー -->
+    <div class="sidebar-right">
+      <p>リンク</p>
+      <ul>
+        <li><a href="#">新着情報</a></li>
+        <li><a href="#">コラボ商品</a></li>
+        <li><a href="#">セール</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
