@@ -1,10 +1,23 @@
+
 body {
-  font-family: "uzurafont100";
+ 
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   background-color: #0b1f30;
-  color:#75600f;
+  color:#fff3c1;
+  text-align: center;
+  font-family: var(--uzura);
+}
+
+@font-face {
+  font-family: "uzura_font";
+  src: url("uzurafont100/uzurafont100.woff2") format("woff2");
+    font-weight: 100;
+    font-display: swap;
+}
+:root {
+  --uzura: "uzura_font";
 }
 
 header {
@@ -37,12 +50,17 @@ section {
 }
 
 .card {
-  background: white;
-  border-left: 6px solid #3498db;
+  background: #9d9264;
+  border-left: 300px ;
+  padding-left: 300px;
   padding: 15px;
-  margin: 15px 0;
+  right: 300px;
+  left: 300px;
+  width: 500px;
+  margin: 15px auto;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 footer {
